@@ -24,13 +24,12 @@ Este é um jogo simples de **Jogo da Velha** (ou Tic-Tac-Toe), onde você joga c
 
    ```bash
    python tictactoe.py
-   ``
 
 4.  jogo será executado no terminal. Basta seguir as instruções para fazer suas jogadas.
 
 ## Estrutura do Código
 
-- Funções:
+### Funções:
 
 - **display_board(board):** Exibe o tabuleiro do jogo no formato de uma grade 3x3.
 

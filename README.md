@@ -23,7 +23,7 @@ Este é um jogo simples de **Jogo da Velha** (ou Tic-Tac-Toe), onde você joga c
 3. Execute o código com o seguinte comando:
 
    ```bash
-   python tictactoe.py
+   python JogoDaVelha.py
 
 4.  jogo será executado no terminal. Basta seguir as instruções para fazer suas jogadas.
 

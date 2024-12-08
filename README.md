@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Jogo da Velha (Tic-Tac-Toe)
 
 Este é um jogo simples de **Jogo da Velha** (ou Tic-Tac-Toe), onde você joga contra o computador. O objetivo do jogo é formar uma linha, coluna ou diagonal com três símbolos consecutivos, sendo o "X" controlado pelo computador e o "O" controlado pelo jogador.
@@ -64,3 +65,7 @@ O jogo terminará com uma das mensagens:
 "You won!" se o jogador vencer.
 "I won" se o computador vencer.
 "Tie!" se houver empate.
+=======
+# JogoDaVelha
+Desenvolvi um jogo da velha, onde o "computador" joga com você selecionando os quadrados com números
+>>>>>>> 3b95457e7ec3505bc78e2d80db8bc83fe3bd4fed

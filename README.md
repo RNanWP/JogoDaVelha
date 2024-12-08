@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Jogo da Velha (Tic-Tac-Toe)
 
 Este é um jogo simples de **Jogo da Velha** (ou Tic-Tac-Toe), onde você joga contra o computador. O objetivo do jogo é formar uma linha, coluna ou diagonal com três símbolos consecutivos, sendo o "X" controlado pelo computador e o "O" controlado pelo jogador.
@@ -25,25 +24,29 @@ Este é um jogo simples de **Jogo da Velha** (ou Tic-Tac-Toe), onde você joga c
 
    ```bash
    python tictactoe.py
+   ``
 
-O jogo será executado no terminal. Basta seguir as instruções para fazer suas jogadas.
-Estrutura do Código
-Funções:
-display_board(board): Exibe o tabuleiro do jogo no formato de uma grade 3x3.
+4.  jogo será executado no terminal. Basta seguir as instruções para fazer suas jogadas.
 
-enter_move(board): Permite que o jogador insira sua jogada, garantindo que o movimento seja válido (número de 1 a 9 e a célula não esteja ocupada).
+## Estrutura do Código
 
-make_list_of_free_fields(board): Cria uma lista das células livres no tabuleiro.
+- Funções:
 
-victory_for(board, sgn): Verifica se o jogador (ou o computador) venceu, checando linhas, colunas e diagonais para três símbolos iguais consecutivos.
+- **display_board(board):** Exibe o tabuleiro do jogo no formato de uma grade 3x3.
 
-draw_move(board): O computador escolhe uma célula livre aleatória para colocar o "X".
+- **enter_move(board):** Permite que o jogador insira sua jogada, garantindo que o movimento seja válido (número de 1 a 9 e a célula não esteja ocupada).
 
-Exemplo de Jogo
+- **make_list_of_free_fields(board):** Cria uma lista das células livres no tabuleiro.
+
+- **victory_for(board, sgn):** Verifica se o jogador (ou o computador) venceu, checando linhas, colunas e diagonais para três símbolos iguais consecutivos.
+
+- **draw_move(board):** O computador escolhe uma célula livre aleatória para colocar o "X".
+
+## Exemplo de Jogo
+
 Aqui está um exemplo de uma possível execução do jogo:
 
-diff
-Copiar código
+````diff
 +-------+-------+-------+
 |       |       |       |
 |   1   |   2   |   3   |
@@ -59,13 +62,11 @@ Copiar código
 +-------+-------+-------+
 
 Digite seu movimento: 5
-Resultado
+````
+## Resultado
+
 O jogo terminará com uma das mensagens:
 
-"You won!" se o jogador vencer.
-"I won" se o computador vencer.
-"Tie!" se houver empate.
-=======
-# JogoDaVelha
-Desenvolvi um jogo da velha, onde o "computador" joga com você selecionando os quadrados com números
->>>>>>> 3b95457e7ec3505bc78e2d80db8bc83fe3bd4fed
+- **"You won!"** se o jogador vencer.
+- **"I won"** se o computador vencer.
+- **"Tie!"** se houver empate.

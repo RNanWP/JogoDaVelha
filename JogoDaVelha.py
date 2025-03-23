@@ -13,49 +13,49 @@ def display_board(board):
 
 
 def enter_move(board):
-	ok = False	# suposição falsa - precisamos dela para entrar no loop
+	ok = False
 	while not ok:
 		move = input("Digite seu movimento: ") 
-		ok = len(move) == 1 and move >= '1' and move <= '9' # a entrada do usuário é válida?
+		ok = len(move) == 1 and move >= '1' and move <= '9'
 		if not ok:
-			print("Má jogada – repita sua entrada!") # não, não é - faça a entrada novamente
+			print("Má jogada – repita sua jogada!")
 			continue
-		move = int(move) - 1 	# número de célula de 0 a 8
-		row = move // 3 	# linha da célula
-		col = move % 3		# coluna da célula
-		sign = board[row][col]	# verifica o quadrado selecionado
+		move = int(move) - 1
+		row = move // 3
+		col = move % 3
+		sign = board[row][col]
 		ok = sign not in ['O','X'] 
-		if not ok:	#está ocupado - para a entrada novamente
-			print("Campo já ocupado – repita sua entrada!")
+		if not ok:
+			print("Campo já ocupado – repita sua jogada!")
 			continue
-	board[row][col] = 'O' 	# define '0' no quadrado selecionado
+	board[row][col] = 'O'
 
 
 def make_list_of_free_fields(board):
 	free = []	
-	for row in range(3): # iterar pelas linhas
-		for col in range(3): # iterar pelas colunas
-			if board[row][col] not in ['O','X']: # o celular está livre?
-				free.append((row,col)) # sim, é - anexe uma nova tupla à lista
+	for row in range(3):
+		for col in range(3):
+			if board[row][col] not in ['O','X']:
+				free.append((row,col))
 	return free
 
 
 def victory_for(board,sgn):
-	if sgn == "X":	# estamos procurando por X?
-		who = 'me'	# sim - é do lado do computador
-	elif sgn == "O": # ... ou para O?
-		who = 'you'	# sim - é o nosso lado
+	if sgn == "X":
+		who = 'Eu'
+	elif sgn == "O":
+		who = 'Você'
 	else:
-		who = None	# não devemos cair aqui!
-	cross1 = cross2 = True  # para diagonais
+		who = None
+	cross1 = cross2 = True
 	for rc in range(3):
-		if board[rc][0] == sgn and board[rc][1] == sgn and board[rc][2] == sgn:	# verifica a linha rc
+		if board[rc][0] == sgn and board[rc][1] == sgn and board[rc][2] == sgn:
 			return who
-		if board[0][rc] == sgn and board[1][rc] == sgn and board[2][rc] == sgn: # verifica a coluna rc
+		if board[0][rc] == sgn and board[1][rc] == sgn and board[2][rc] == sgn:
 			return who
-		if board[rc][rc] != sgn: # verifica a 1ª diagonal
+		if board[rc][rc] != sgn:
 			cross1 = False
-		if board[2 - rc][2 - rc] != sgn: # verifica a segunda diagonal
+		if board[2 - rc][2 - rc] != sgn:
 			cross2 = False
 	if cross1 or cross2:
 		return who
@@ -63,7 +63,7 @@ def victory_for(board,sgn):
 
 
 def draw_move(board):
-	free = make_list_of_free_fields(board) #faça uma lista de campos livres
+	free = make_list_of_free_fields(board)
 	cnt = len(free)
 	if cnt > 0:	
 		this = randrange(cnt)
@@ -72,9 +72,9 @@ def draw_move(board):
 
 
 board = [ [3 * j + i + 1 for i in range(3)] for j in range(3) ] 
-board[1][1] = 'X' # coloca primeiro 'X' no meio
+board[1][1] = 'X'
 free = make_list_of_free_fields(board)
-human_turn = True # que turno é agora?
+human_turn = True
 while len(free):
 	display_board(board)
 	if human_turn:
@@ -89,9 +89,9 @@ while len(free):
 	free = make_list_of_free_fields(board)
 
 display_board(board)
-if victor == 'you':
-	print("You won!")
-elif victor == 'me':
-	print("I won")
+if victor == 'Você':
+	print("Você ganhou!")
+elif victor == 'Eu':
+	print("Eu perdi")
 else:
 	print("Tie!")
